@@ -1,0 +1,13 @@
+/* Installed web app (PWA): full-screen on iPhone, no demo frame. Loaded only by the PWA index.html. */
+html,body.pwa{height:100%;background:var(--paper);overscroll-behavior:none}
+body.pwa .preview-banner,body.pwa .introduction,body.pwa .statusbar,body.pwa .home-indicator{display:none}
+body.pwa .workspace{display:block;max-width:none;margin:0;padding:0;height:100%}
+body.pwa .phone{width:100%;height:100dvh;border:0;border-radius:0;box-shadow:none;display:flex;flex-direction:column}
+body.pwa .phone header{padding:calc(env(safe-area-inset-top) + 12px) calc(env(safe-area-inset-right) + 18px) 12px calc(env(safe-area-inset-left) + 18px);flex-shrink:0}
+body.pwa #content{flex:1;min-height:0;max-height:none;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 calc(env(safe-area-inset-right) + 16px) 18px calc(env(safe-area-inset-left) + 16px)}
+body.pwa nav{flex-shrink:0;padding-bottom:calc(env(safe-area-inset-bottom) + 6px)}
+body.pwa #toast{bottom:calc(env(safe-area-inset-bottom) + 88px)}
+body.pwa dialog{max-height:calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 24px)}
+body.pwa .logo-opening{padding-top:calc(env(safe-area-inset-top) + 24px);padding-bottom:calc(env(safe-area-inset-bottom) + 24px)}
+/* Wider screens (iPad or desktop browser): keep a comfortable reading width. */
+@media (min-width:700px){body.pwa .phone{max-width:560px;margin:0 auto;border-inline:1px solid var(--line)}}
